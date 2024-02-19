@@ -1,4 +1,47 @@
-.example-form-field {
-    width: 200px;
+.oncarHero {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  .oncarHero-l {
+      padding: 2rem;
+  
+      h1 {
+          position: relative;
+          margin-bottom: 50px;
+      }
+  
+      h1:before {
+          content: '';
+          background-color: #C92227;
+          width: 30%;
+          height: 6px;
+  
+          position: absolute;
+          bottom: -15px;
+      }
+  
+      p {
+          margin-bottom: 30px;
+      }
+  
+      .btn-oncar {
+          color: #ffffff;
+          background-color: #C92227;
+          font-weight: 600;
+          transition: .1s ease-in-out;
+      }
+
+      .btn-oncar:hover {
+        scale: (1.05);
+      }
+  
   }
   
+  .oncarHero-r {
+      img {
+          width: 100%;
+      }
+  }
+}
