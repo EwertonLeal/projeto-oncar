@@ -1,3 +1,7 @@
+.oncarContainer {
+  padding: 0 2rem;
+}
+
 .oncarHero {
   width: 100%;
 
@@ -24,24 +28,130 @@
   
       p {
           margin-bottom: 30px;
-      }
-  
-      .btn-oncar {
-          color: #ffffff;
-          background-color: #C92227;
-          font-weight: 600;
-          transition: .1s ease-in-out;
-      }
-
-      .btn-oncar:hover {
-        scale: (1.05);
-      }
-  
+      }  
   }
   
   .oncarHero-r {
       img {
           width: 100%;
       }
+  }
+}
+
+.oncarCatalogo-home {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.btn-oncar {
+    color: #ffffff;
+    background-color: #C92227;
+    font-weight: 600;
+    transition: .1s ease-in-out;
+    outline: none;
+    border: none;
+}
+
+.btn-oncar:hover {
+  scale: (1.05);
+}
+
+.btn-oncar:disabled {
+  opacity: 0.8;
+  cursor: no-drop;
+}
+
+.fianciamento {
+    border-radius: 30px;
+    background-image: url("../assets/images/bg-cta.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 2rem;
+    margin: 2rem;
+    height: 300px;
+
+    .inputRow {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 30px;
+    }
+
+    input {
+        width: 300px;
+        border: none;
+        outline: none;
+        background-color: #EEEFF1;
+        height: 45px;
+        transition: .1s ease-in-out;
+        padding-left: 10px;
+        color: #010101;
+        font-size: 14px;
+        padding-bottom: 0;
+    }
+      
+    input:focus, input:hover {
+      border-bottom: .1px solid #C92227;
+    }
+        
+    label {
+      color: #010101;
+      font-weight: 400;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      pointer-events: none;
+      transition: .1s ease-in-out;
+    }
+    
+    input:focus ~ label, input.active ~ label {
+      font-size: 10px;
+      top: 20%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+  .col-12 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .oncarHero {
+    flex-direction: column-reverse;
+  }
+
+  .fianciamento  {
+
+    input {
+      width: 100%;
+    }
+
+    .inputRow {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+
+  }
+
+
+}
+
+@media (max-width: 576px) {
+  .col-12 {
+    flex: 0 0 auto;
+    width: 100%;
   }
 }

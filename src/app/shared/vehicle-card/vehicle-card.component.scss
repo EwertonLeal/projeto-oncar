@@ -1,0 +1,48 @@
+.vehicle-card-container {
+    background-color: #EEEFF1;
+    border-radius: 6px;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(179, 179, 179, 0.658);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(179, 179, 179, 0.658);
+    box-shadow: 1px 1px 5px 1px rgba(179, 179, 179, 0.658);
+    transition: .1s ease-in;
+    cursor: pointer;
+}
+
+.vehicle-card_imgContainer {
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../../../assets/images/vehicleCard-img-container.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.vehicle-into {
+    padding: 20px 10px;
+    text-align: start;
+
+    .vehicle-name {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .vehicle-description {
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+}
+
+.vehicle-price {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.vehicle-card-container:hover {
+    scale: (1.03);
+}

@@ -1,0 +1,36 @@
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #EEEFF1;
+  height: 45px;
+  transition: .1s ease-in-out;
+  padding-left: 40px;
+  font-size: 14px;
+  padding-bottom: 0;
+}
+
+input:focus, input:hover {
+  border-bottom: .1px solid #C92227;
+}
+
+mat-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40px;
+  pointer-events: none;
+  transition: .1s ease-in-out;
+}
+
+input:focus ~ label, input.active ~ label {
+  font-size: 10px;
+  top: 20%;
+}

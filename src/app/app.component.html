@@ -1,5 +1,5 @@
 <section class="oncarHero col-md-12">
-  <div class="col-md-6 oncarHero-l">
+  <div class="col-md-6 col-sm-12 oncarHero-l">
       <h1>
           seu carro novo <br>
           está aqui!
@@ -11,7 +11,44 @@
 
       <button class="btn btn-oncar">Veja nosso catalogo</button>
   </div>
-  <div class="col-md-6 oncarHero-r">
+  <div class="col-md-6 col-sm-12 oncarHero-r">
       <img draggable="false" src="../assets/images/hero-img1.png" alt="" srcset="">
   </div>
+</section>
+
+<section class="oncarContainer oncarCatalogo-home">
+    <h1>Catalogo de carros</h1>
+    <p>Veja nossas novidades</p>
+
+    <div class="col-md-12 mt-5 mb-5">
+        <div class="row gap-3">
+            <oncar-input-select class="col-md-3" inputLabel="Marca" ></oncar-input-select>
+            <oncar-input-select class="col-md-3" inputLabel="Modelo" ></oncar-input-select>
+            <oncar-input class="col-md-3" inputIcon="calendar_today" inputLabel="Ano" ></oncar-input>
+            <oncar-input class="col-md-3" inputIcon="palette" inputLabel="Cor" ></oncar-input>
+        </div>
+    </div>
+
+    <div class="col-md-12 mb-5">
+        <div class="row">
+            <vehicle-card class="col-lg-3 col-md-4 col-12 mb-4"></vehicle-card>
+            <vehicle-card class="col-lg-3 col-md-4 col-12 mb-4"></vehicle-card>
+            <vehicle-card class="col-lg-3 col-md-4 col-12 mb-4"></vehicle-card>
+            <vehicle-card class="col-lg-3 col-md-4 col-12 mb-4"></vehicle-card>
+        </div>
+    </div>
+</section>
+
+<section class="fianciamento">
+    <h2 class="cta">
+        SIMULE SEU FINANCIAMENTO
+    </h2>
+
+    <div class="inputRow">
+        <div class="position-relative">
+            <input type="text" [(ngModel)]="financialValue" [ngClass]="{'active': financialValue}">
+            <label>Valor do veículo</label>
+        </div>
+        <button class="ml-3 btn btn-oncar" [disabled]="!financialValue">Veja nosso catalogo</button>
+    </div>
 </section>
