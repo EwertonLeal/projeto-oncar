@@ -5,38 +5,38 @@
         </div>
 
         <div class="col-md-6 datail-page-r">
-            <h2>FIAT UNO</h2>
-            <p>1.0 MPI MILLE FIRE ECONOMY 8V FLEX 2P MANUAL</p>
-            <h2>R$ 15.000,00</h2>
+            <h2>{{ carDatail.model }}</h2>
+            <p>{{ carDatail.description }}</p>
+            <h2>{{ +carDatail.price | currency : "R$" }}</h2>
 
             <ul class="lista-caracteristicas">
                 <li class="lista-caracteristicas-item">
                     <mat-icon fontIcon="calendar_today"></mat-icon>
-                    <small>2008</small>
+                    <small>{{ carDatail.year }}</small>
                 </li>
                 
                 <li class="lista-caracteristicas-item">
                     <mat-icon fontIcon="calendar_today"></mat-icon>
-                    <small>Gasolina</small>
+                    <small>{{ carDatail.fuel }}</small>
                 </li>
         
                 <li class="lista-caracteristicas-item">
                     <mat-icon fontIcon="calendar_today"></mat-icon>
-                    <small>Prata</small>
+                    <small>{{ carDatail.color }}</small>
                 </li>
         
                 <li class="lista-caracteristicas-item">
                     <mat-icon fontIcon="calendar_today"></mat-icon>
-                    <small>55192 Km</small>
+                    <small>{{ carDatail.kilometers }} Km</small>
                 </li>
         
                 <li class="lista-caracteristicas-item">
                     <mat-icon fontIcon="calendar_today"></mat-icon>
-                    <small>4 portas</small>
+                    <small>{{ carDatail.numOfDoors }} portas</small>
                 </li>
             </ul>
 
-            <button routerLink="/financiamento" class="btn btn-oncar">Simular financiamento</button>
+            <button (click)="onGetFinancing()" class="ml-3 btn btn-oncar">Simule seu financiamento</button>
         </div>
     </div>
 </section>

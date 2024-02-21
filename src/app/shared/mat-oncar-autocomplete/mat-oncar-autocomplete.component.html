@@ -1,0 +1,13 @@
+<form class="example-form">
+    <div class="position-relative">
+        <mat-icon [fontIcon]="inputIcon"></mat-icon>
+        <input type="text" [(ngModel)]="inputValue" [ngClass]="{'active': inputValue}" (input)="onInputChange($event)" [formControl]="control" [matAutocomplete]="auto">
+        <label>{{ inputLabel }}</label>
+    </div>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="carFilter($event)">
+      <mat-option *ngFor="let item of filteredItens | async" [value]="item">
+        {{item}}
+      </mat-option>
+    </mat-autocomplete>
+  </form>
+  

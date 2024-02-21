@@ -6,17 +6,17 @@
 
 
     <div class="vehicle-into">
-        <h3 class="vehicle-name">Fiat Uno</h3>
-        <small class="vehicle-description">1.0 MPI MILLE FIRE ECONOMY 8V FLEX 2P MANUAL</small>
+        <h3 class="vehicle-name">{{ carData.model }}</h3>
+        <small class="vehicle-description">{{ carData.description }}</small>
 
         <div class="mt-3 d-flex align-items-end justify-content-between">
             <div class="info-l">
-                <h3 class="vehicle-price">R$ 15.000,00</h3>
-                <small class="vehicle-year">2008</small>
+                <h3 class="vehicle-price">{{ +carData.price | currency: 'R$' }}</h3>
+                <small class="vehicle-year">{{ carData.year }}</small>
             </div>
             
             <div class="info-r">
-                <small class="vehicle-km">293.000 Km</small>
+                <small class="vehicle-km">{{ carData.kilometers }} Km</small>
             </div>
         </div>
     </div>

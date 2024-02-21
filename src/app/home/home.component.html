@@ -19,23 +19,13 @@
 <section class="oncarContainer oncarCatalogo-home">
       <h1>Catalogo de carros</h1>
       <p>Veja nossas novidades</p>
-  
-      <div class="col-md-12 mt-5 mb-5">
-        <div class="row mx-3">
-            <oncar-input-select class="col-md-3 mb-3" inputLabel="Marca" ></oncar-input-select>
-            <oncar-input-select class="col-md-3 mb-3" inputLabel="Modelo" ></oncar-input-select>
-            <oncar-input class="col-md-3 mb-3" inputIcon="calendar_today" inputLabel="Ano" ></oncar-input>
-            <oncar-input class="col-md-3 mb-3" inputIcon="palette" inputLabel="Cor" ></oncar-input>
-        </div>
-    </div>
-  
+    
       <div class="col-md-12 mb-5">
           <div class="row">
-              <vehicle-card routerLink="/detalhe" class="col-lg-3 col-md-4 custom-sm-col mb-4"></vehicle-card>
-              <vehicle-card routerLink="/detalhe" class="col-lg-3 col-md-4 custom-sm-col mb-4"></vehicle-card>
-              <vehicle-card routerLink="/detalhe" class="col-lg-3 col-md-4 custom-sm-col mb-4"></vehicle-card>
-              <vehicle-card routerLink="/detalhe" class="col-lg-3 col-md-4 custom-sm-col mb-4"></vehicle-card>
+              <vehicle-card *ngFor="let car of carsInHomePage$ | async" [carData]="car" [routerLink]="'/detalhe/'+car._id" class="col-lg-3 col-md-4 custom-sm-col mb-4"></vehicle-card>
           </div>
+
+          <button routerLink="/catalogo" class="btn btn-oncar mt-3">Veja nosso catalogo</button>
       </div>
 </section>
 
@@ -49,6 +39,6 @@
               <input type="text" [(ngModel)]="financialValue" [ngClass]="{'active': financialValue}">
               <label>Valor do veículo</label>
           </div>
-          <button class="ml-3 btn btn-oncar" [disabled]="!financialValue">Veja nosso catalogo</button>
+          <button (click)="onGetFinancing()" class="ml-3 btn btn-oncar" [disabled]="!financialValue">Simule seu financiamento</button>
       </div>
 </section>

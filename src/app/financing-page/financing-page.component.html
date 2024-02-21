@@ -10,7 +10,7 @@
             </h2>
 
             <h2 class="valueLabel">
-                R$ 9000,00
+                {{ financingValue | currency : 'R$' }}
             </h2>
 
             <h2>
@@ -18,7 +18,7 @@
             </h2>
 
             <h2 class="valueLabel">
-                R$ 21.000,00
+                {{ entryValue | currency : 'R$' }}
             </h2>
         </div>
     </div>
