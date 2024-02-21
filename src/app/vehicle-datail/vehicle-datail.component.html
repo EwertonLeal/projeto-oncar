@@ -1,7 +1,7 @@
 <section class="datail-page col-md-12 px-4">
     <div class="row">
         <div class="col-md-6 datail-page-l">
-            <img src="../../assets/images/exemple2.jpg" width="100%" alt="">
+            <img [src]="'data:image/jpeg;base64,' + carDatail.carPhoto" [alt]="carDatail.description">
         </div>
 
         <div class="col-md-6 datail-page-r">

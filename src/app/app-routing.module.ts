@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { FinancingPageComponent } from './financing-page/financing-page.component';
 import { VehicleicatalogComponent } from './vehicleicatalog/vehicleicatalog.component';
 import { VehicleDatailComponent } from './vehicle-datail/vehicle-datail.component';
+import { CarsAdminComponent } from './cars-admin/cars-admin.component';
 
 const routes: Routes = [
   {
@@ -15,21 +16,17 @@ const routes: Routes = [
     component: FinancingPageComponent
   },
   {
-    path: 'financiamento/:id',
-    component: FinancingPageComponent
-  },
-  {
     path: 'catalogo',
     component: VehicleicatalogComponent
   },
   {
-    path: 'detalhe',
+    path: 'detalhe/:id',
     component: VehicleDatailComponent
   },
   {
-    path: 'detalhe/:id',
-    component: VehicleDatailComponent
-  }
+    path: 'admin',
+    component: CarsAdminComponent
+  },
 ];
 
 @NgModule({

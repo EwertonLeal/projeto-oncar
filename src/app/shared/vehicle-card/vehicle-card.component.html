@@ -1,9 +1,7 @@
 <div class="vehicle-card-container">
     <div class="vehicle-card_imgContainer">
-        <img src="../../../assets/images/carro.png" draggable="false" alt="texto alternativo com o nome do veículo">
+        <img [src]="'data:image/jpeg;base64,' + carData.carPhoto" draggable="false" [alt]="carData.description" width="100%">
     </div>
-
-
 
     <div class="vehicle-into">
         <h3 class="vehicle-name">{{ carData.model }}</h3>

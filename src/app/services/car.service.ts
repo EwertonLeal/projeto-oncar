@@ -14,7 +14,7 @@ export class CarService {
     return this.http.get<Car[]>("http://localhost:3000/car/home");
   }
 
-  getCars(filtros: any): Observable<Car[]> {
+  getCars(filtros?: any): Observable<Car[]> {
     let params = new HttpParams();
     if (filtros?.brand) params = params.set('brand', filtros.brand);
     if (filtros?.model) params = params.set('model', filtros.model);
@@ -27,6 +27,14 @@ export class CarService {
 
   getCarById(id: string) {
     return this.http.get<Car>(`http://localhost:3000/car/${id}`);
+  }
+
+  postCar(formData: any) {
+    return this.http.post<Car>("http://localhost:3000/car", formData);
+  }
+
+  deleteCar(id: string) {
+    return this.http.delete(`http://localhost:3000/car/${id}`);
   }
 
 }
