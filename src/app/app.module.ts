@@ -10,11 +10,20 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { MatIconModule } from '@angular/material/icon';
+import { HomeComponent } from './home/home.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FinancingPageComponent } from './financing-page/financing-page.component';
+import { VehicleicatalogComponent } from './vehicleicatalog/vehicleicatalog.component';
+import { VehicleDatailComponent } from './vehicle-datail/vehicle-datail.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    FinancingPageComponent,
+    VehicleicatalogComponent,
+    VehicleDatailComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +34,7 @@ import { MatIconModule } from '@angular/material/icon';
     ReactiveFormsModule,
     NgbModule,
     MatIconModule,
+    MatToolbarModule,
     SharedModule
   ],
   providers: [],

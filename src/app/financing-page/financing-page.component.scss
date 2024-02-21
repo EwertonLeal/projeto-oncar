@@ -1,0 +1,84 @@
+.financial-page {
+    width: 99%;
+    padding-top: 80px;
+    height: 97vh;
+
+    .row {
+        height: 100%;
+    }
+
+    .financial-page-l {
+        background-image: url("../../assets/images/financial-vehicle-bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 80%;
+        }
+    }
+
+    .financial-page-r {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+
+        h2 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        .valueLabel {
+            color: #C92227;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+    }
+
+}
+
+@media (max-width: 992px) {
+    .financial-page {
+        padding: 80px 2rem 0;
+
+        .financial-page-r {
+            h2 {
+                font-size: 32px;
+            }
+
+            .valueLabel {
+                font-size: 26px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .financial-page {
+        padding: 80px 2rem 0;
+
+        .financial-page-l {
+
+            height: 280px;
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        .financial-page-r {
+            gap: 1rem;
+            margin-top: 60px;
+
+            h2 {
+                font-size: 26px;
+            }
+        }
+    }
+}
