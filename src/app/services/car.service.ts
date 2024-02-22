@@ -11,7 +11,7 @@ export class CarService {
   constructor(private http: HttpClient) { }
 
   getCarsInHomePage(): Observable<Car[]> {
-    return this.http.get<Car[]>("http://localhost:3000/car/home");
+    return this.http.get<Car[]>("https://oncar-backend.vercel.app/car/home");
   }
 
   getCars(filtros?: any): Observable<Car[]> {
@@ -22,19 +22,19 @@ export class CarService {
     if (filtros?.color) params = params.set('color', filtros.color);
 
 
-    return this.http.get<Car[]>("http://localhost:3000/car", { params });
+    return this.http.get<Car[]>("https://oncar-backend.vercel.app/car", { params });
   }
 
   getCarById(id: string) {
-    return this.http.get<Car>(`http://localhost:3000/car/${id}`);
+    return this.http.get<Car>(`https://oncar-backend.vercel.app/car/${id}`);
   }
 
   postCar(formData: any) {
-    return this.http.post<Car>("http://localhost:3000/car", formData);
+    return this.http.post<Car>("https://oncar-backend.vercel.app/car", formData);
   }
 
   deleteCar(id: string) {
-    return this.http.delete(`http://localhost:3000/car/${id}`);
+    return this.http.delete(`https://oncar-backend.vercel.app/car/${id}`);
   }
 
 }
